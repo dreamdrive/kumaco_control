@@ -1,0 +1,29 @@
+<launch>
+
+	<!-- <arg name="model" />  -->
+	<!-- <arg name="gui" default="True" /> -->
+	<!-- <param name="robot_description" textfile="$(find seto_scararobot)/urdf/robo.urdf" /> -->
+	<!-- <param name="use_gui" value="$(arg gui)"/> -->
+	<!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> --> -->
+	<!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" /> -->
+	<!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find seto_scararobot)/urdf.rviz" required="true" /> -->
+	<!-- <node name="move_test" pkg="seto_scararobot" type="move_test" /> -->
+
+	<!--カメラノード起動-->
+	<node name="uvc_camera" pkg="uvc_camera" type="uvc_camera_node" output="screen">
+      <param name="device" type="string" value="/dev/video0"/>
+      <param name="width" type="int" value="640"/>
+      <param name="height" type="int" value="480"/>
+	  <remap from="/image_raw" to="/image"/>	<!-- /image_rawを/imageに変更 -->
+    </node>
+
+	<!-- OpenCV 顔認識ノード起動 -->
+	<include file="$(find opencv_apps)/launch/face_detection.launch"/> <!-- このノードはデフォルトで/imageを食べる -->
+
+	<!-- KOMACOコントロールノード起動 -->
+	<node name="face2happy" pkg="kumaco_control" type="face2happy" output="screen"/>
+
+	<node name="vsrc_connect" pkg="ros2vsrc" type="vsrc_connect" output="screen"/>
+
+
+</launch>

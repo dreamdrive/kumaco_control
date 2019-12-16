@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/hiro/catkin_ws/devel/include",
+                "/home/hiro/catkin_ws/install/include",
+                "/opt/ros/kinetic/include",
+                "/home/hiro/catkin_ws/src/darknet_ros/darknet_ros/include",
+                "/home/hiro/catkin_ws/src/DynamixelSDK/ros/include",
+                "/home/hiro/catkin_ws/src/dynamixel-workbench/dynamixel_workbench_controllers/include",
+                "/home/hiro/catkin_ws/src/dynamixel-workbench/dynamixel_workbench_operators/include",
+                "/home/hiro/catkin_ws/src/dynamixel-workbench/dynamixel_workbench_single_manager/include",
+                "/home/hiro/catkin_ws/src/dynamixel-workbench/dynamixel_workbench_single_manager_gui/include",
+                "/home/hiro/catkin_ws/src/dynamixel-workbench/dynamixel_workbench_toolbox/include",
+                "/home/hiro/catkin_ws/src/realsense-ros-2.2.7/realsense2_camera/include",
+                "/home/hiro/catkin_ws/src/ros_start/include",
+                "/home/hiro/catkin_ws/src/ros_tutorials/turtlesim/include",
+                "/usr/include"
+            ],
+            "name": "Linux",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
