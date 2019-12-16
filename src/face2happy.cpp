@@ -1,9 +1,6 @@
 #include "ros/ros.h"
 #include "ros/time.h"
 
-#include "std_msgs/Float64.h"
-#include "std_msgs/String.h"
-
 #include "opencv_apps/FaceArrayStamped.h"
 #include "ros2vsrc/VsrcControl.h"
 
